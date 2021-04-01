@@ -1,3 +1,25 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+inicio:
+  path: /
+  controller: App\Controller\RegistroUsuarioController::registro
+
+contacto:
+  path: /contacto
+  controller: App\Controller\ContactoController::index
+
+contacto.post:
+  path: /contacto_crear
+  controller: App\Controller\ContactoController::CreateComment
+  methods: POST
+
+contacto.post.email:
+  path: /contacto_email/{commentId}
+  controller: App\Controller\ContactoController::SendMailByCommentId
+  methods: GET
+
+admin:
+  path: /admin
+  controller: App\Controller\Admin\DashboardController::index
