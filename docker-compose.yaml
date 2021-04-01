@@ -10,3 +10,8 @@ services:
       MYSQL_DATABASE: "correos"
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
       MYSQL_ROOT_PASSWORD: ""
+  
+  mailer:
+    image: schickling/mailcatcher
+    ports: 
+      - "1025:1080"
