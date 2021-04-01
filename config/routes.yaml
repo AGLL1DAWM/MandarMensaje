@@ -2,18 +2,17 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-inicio:
-  path: /
-  controller: App\Controller\RegistroUsuarioController::registro
+# inicio:
+#  path: /
+#  controller: App\Controller\RegistroUsuarioController::registro
 
 contacto:
-  path: /contacto
+  path: /
   controller: App\Controller\ContactoController::index
 
 contacto.post:
-  path: /contacto_crear
+  path: /contacto
   controller: App\Controller\ContactoController::CreateComment
-  methods: POST
 
 contacto.post.email:
   path: /contacto_email/{commentId}
